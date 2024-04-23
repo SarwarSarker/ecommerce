@@ -6,15 +6,15 @@ const SliderCard = () => {
     <>
       <div className="relative w-full">
         <div
-          className="relative flex items-center bg-center bg-no-repeat bg-cover md:bg- min-h-[300px] md:h-56 w-full overflow-hidden lg:h-96"
+          className="relative flex items-center bg-center md:bg-right bg-no-repeat bg-cover md:bg- min-h-[300px] md:h-56 w-full overflow-hidden lg:h-96"
           style={{ backgroundImage: `url('/images/banner.png')` }}
         >
           <div className="container mx-auto">
             <div className="w-full flex justify-between items-center px-5 lg:px-14">
-              <div className="pl-5 pr-5 lg:pr-12 w-full lg:w-2/5">
+              <div className=" w-full lg:w-2/5">
                 <h2 className="text-gray-900 text-3xl leading-9 lg:text-[57px] lg:leading-[53px] font-normal mb-2">
                   Shop
-                  <span className="text-lightBlue">Computer & experience</span>
+                  <span className="text-lightBlue ml-1 md:ml-2">Computer & experience</span>
                 </h2>
                 <div className="w-full lg:w-5/6">
                   <p className="text-gray-900 text-[13px]">
@@ -36,8 +36,8 @@ const SliderCard = () => {
                   </Link>
                 </div>
               </div>
-              <div className="mr-3 lg:mr-10">
-                <p className="h-14 w-14 md:h-20 md:w-20 lg:h-28 lg:w-28 flex justify-center items-center p-6 text-xl leading-7 lg:text-[47px] lg:leading-[50px] font-normal text-white rounded-full bg-gradient-to-r from-[#FDC830] to-[#F37335]">
+              <div className="mr-3 lg:mr-10 -mt-12 lg:-mt-40">
+                <p className="h-24 w-24 md:h-28 md:w-28 lg:h-28 lg:w-28 flex justify-center items-center p-6 text-xl md:text-3xl leading-7 lg:text-[47px] lg:leading-[50px] font-normal text-white rounded-full bg-gradient-to-r from-[#FDC830] to-[#F37335]">
                   40%
                 </p>
               </div>

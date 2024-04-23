@@ -1,146 +1,223 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-[#393939] px-5 pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+      <footer className="relative bg-[#393939] p-5 lg:py-10 lg:px-10">
         <div className="container mx-auto">
-          <div className="container mx-auto">
-            <div className="flex flex-wrap -mx-4">
-              <div className="w-full px-4 sm:w-2/3 lg:w-3/12 ">
-                <div className="w-full mb-10">
-                  <p className="text-base text-body-color dark:text-dark-6 mb-7">
-                    Sed ut perspiciatis undmnis is iste natus error sit amet
-                    voluptatem totam rem aperiam.
-                  </p>
-                  <p className="flex items-center text-sm font-medium text-dark dark:text-white">
-                    <span>+012 (345) 678 99</span>
-                  </p>
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full px-4 sm:w-2/3 lg:w-3/12 ">
+              <div className="w-full mb-10">
+                <Link href="/" className="">
+                  <Image
+                    src="/images/icons/logo.png"
+                    width={120}
+                    height={120}
+                    alt="logo"
+                  />
+                </Link>
+                <p className="text-lightBlue text-lg my-3">
+                  Got questions? Call us 24/7!
+                </p>
+                <p className="text-md text-white">+012 (345) 678 99</p>
+                <p className="text-md text-white">+012 (345) 678 99</p>
+
+                <p className="text-lg text-lightBlue pt-3">Contact info</p>
+                <p className="text-md text-white">info@winstore.pk</p>
+                <div className="flex items-center gap-5 mt-5">
+                  <Link href="">
+                    <Image
+                      src="/images/icons/facebook.svg"
+                      width={11}
+                      height={22}
+                      alt="facebook"
+                      className="cursor-pointer"
+                    />
+                  </Link>
+                  <Link href="">
+                    <Image
+                      src="/images/icons/twiter.svg"
+                      width={22}
+                      height={20}
+                      alt="twiter"
+                      className="cursor-pointer"
+                    />
+                  </Link>
+                  <Link href="">
+                    <Image
+                      src="/images/icons/linkedin.svg"
+                      width={22}
+                      height={22}
+                      alt="linkedin"
+                      className="cursor-pointer"
+                    />
+                  </Link>
+                  <Link href="">
+                    <Image
+                      src="/images/icons/instragram.svg"
+                      width={22}
+                      height={22}
+                      alt="instragram"
+                      className="cursor-pointer"
+                    />
+                  </Link>
                 </div>
               </div>
-              <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
-                <div className="w-full mb-10">
-                  <h4 className="text-lg font-semibold text-dark dark:text-white mb-9">
-                    Resources
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        SaaS Development
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        Our Products
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        User Flow
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        User Strategy
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
+              <div className="w-full mb-10 text-white">
+                <h4 className="text-xl font-semibold text-lightBlue mb-5">
+                  Trending
+                </h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Installments
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Electronics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Grocery
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Health & Beauty
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Home Appliances
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Mobile Accessories
+                    </Link>
+                  </li>
+                </ul>
               </div>
-              <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
-                <div className="w-full mb-10">
-                  <h4 className="text-lg font-semibold text-dark dark:text-white mb-9">
-                    Company
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        About TailGrids
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        Contact & Support
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        Success History
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        Setting & Privacy
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
+              <div className="w-full mb-10 text-white">
+                <h4 className="text-xl font-semibold text-lightBlue  mb-5">
+                  Information
+                </h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="/" className="text-sm">
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      FAQs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Shipping & Return
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Privacy policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Terms & Conditions
+                    </Link>
+                  </li>
+                </ul>
               </div>
-              <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
-                <div className="w-full mb-10">
-                  <h4 className="text-lg font-semibold text-dark dark:text-white mb-9">
-                    Quick Links
-                  </h4>
-                  <ul className="space-y-3">
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        Premium Support
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        Our Services
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        Know Our Team
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="javascript:void(0)"
-                        className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6"
-                      >
-                        Download App
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
+              <div className="w-full mb-10 text-white">
+                <h4 className="text-xl font-semibold text-lightBlue  mb-5">
+                  Customer Care
+                </h4>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="/" className="text-sm">
+                      My Account
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Track Your Order
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Recently Viewed
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Wishlist
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Compare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="text-sm">
+                      Become a Vendor
+                    </Link>
+                  </li>
+                </ul>
               </div>
+            </div>
+          </div>
+          <div className="w-full lg:w-9/12 mx-auto">
+            <div className="flex gap-5 items-center justify-end">
+              <Link href="/" className="">
+                <Image
+                  src="/images/icons/visa.svg"
+                  width={90}
+                  height={90}
+                  alt=""
+                />
+              </Link>
+              <Link href="/" className="">
+                <Image
+                  src="/images/icons/mastercard.svg"
+                  width={90}
+                  height={90}
+                  alt=""
+                />
+              </Link>
+              <Link href="/" className="">
+                <Image
+                  src="/images/icons/cash.svg"
+                  width={90}
+                  height={90}
+                  alt=""
+                />
+              </Link>
+              <Link href="/" className="">
+                <Image
+                  src="/images/icons/instalment.svg"
+                  width={90}
+                  height={90}
+                  alt=""
+                />
+              </Link>
             </div>
           </div>
         </div>

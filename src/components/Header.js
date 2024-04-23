@@ -29,10 +29,7 @@ const Header = () => {
           <div className="container mx-auto">
             <div className="flex items-center justify-between  py-2 md:pt-2 lg:pt-2  md:pb-1 lg:pb-1 lg:px-10">
               <div className="flex items-center justify-between gap-10">
-                <Link
-                  href="/"
-                  className="logo-fade cursor-pointer inline-block text-white uppercase font-500 text-sm md:text-base leading-[18px]"
-                >
+                <Link href="/" className="">
                   <Image
                     src="/images/icons/logo.png"
                     width={120}
@@ -63,7 +60,7 @@ const Header = () => {
                     <div className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                       <ul className="py-2 text-sm text-gray-700">
                         <li>
-                          <button className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                          <button className="inline-flex w-full px-4 py-2 hover:bg-gray-100 ">
                             Mockups
                           </button>
                         </li>
@@ -216,27 +213,57 @@ const Header = () => {
       <header
         className={`flex  flex-col min-h-[60px] py-4 px-4 md:px-10 md:py-6 lg:py-8  lg:hidden  bg-lightGreen w-full`}
       >
-        <div className="flex mb-2 items-center justify-between text-white">
-          <p className="text-[9px] cursor-pointer hover:underline">
-            Call Us Now
-          </p>
-          <div className="flex items-center text-[13px]">
-            <Image
-              src="/images/icons/headphone.svg"
-              width={15}
-              height={15}
-              alt="headphone"
-              className="mr-2"
-            />
-            <span className="cursor-pointer">+011 5827918</span>
+        <div className="flex justify-between items-center">
+          <div className="flex mb-2 items-center gap-3 text-white">
+            <p className="text-[9px] cursor-pointer hover:underline">
+              Call Us Now
+            </p>
+            <div className="flex items-center text-[13px]">
+              <Image
+                src="/images/icons/headphone.svg"
+                width={10}
+                height={10}
+                alt="headphone"
+                className="mr-1"
+              />
+              <span className="cursor-pointer">+0115827</span>
+            </div>
+            <p className="text-[13px] hover:underline cursor-pointer">
+              Sign In
+            </p>
           </div>
-          <p className="text-[13px] hover:underline cursor-pointer">Sign In</p>
+          <div className="flex gap-4 justify-end items-center text-white">
+            <Image
+              src="/images/icons/user.svg"
+              width={20}
+              height={20}
+              alt="user"
+              className="cursor-pointer"
+            />
+            <Image
+              src="/images/icons/favoraite.svg"
+              width={20}
+              height={20}
+              alt="favoraite"
+              className="cursor-pointer"
+            />
+            <div className="flex items-center relative">
+              <Image
+                src="/images/icons/cart.svg"
+                width={20}
+                height={20}
+                alt="cart"
+                className="cursor-pointer"
+              />
+              <span className="absolute -top-3 left-2 text-[15px] text-lightyellow">
+                3
+              </span>
+              <span className="text-[15px]">Cart</span>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center justify-between mb-[18px] md:mb-6">
-          <Link
-            href="/"
-            className="logo-fade cursor-pointer inline-block text-white uppercase font-500 text-sm md:text-base leading-[18px]"
-          >
+        <div className="flex items-center justify-between">
+          <Link href="/" className="">
             <Image
               src="/images/icons/logo.png"
               width={120}
@@ -244,36 +271,17 @@ const Header = () => {
               alt="logo"
             />
           </Link>
-          <button
-            onClick={handleClick}
-            className={`flex flex-col justify-center items-center ml-3 md:ml-[32px] h-4 cta-fade relative`}
-          >
-            <span
-              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm -translate-y-0.5`}
-            ></span>
-            <span
-              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm my-0.5 opacity-100`}
-            ></span>
-            <span
-              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm translate-y-0.5`}
-            ></span>
-          </button>
+          <Link onClick={handleClick} href="" className="">
+            <Image
+              src="/images/icons/hambarger.svg"
+              width={20}
+              height={20}
+              alt="logo"
+            />
+          </Link>
         </div>
+
         <div className="w-full flex items-center justify-between  text-white z-20 ">
-          {/* <button
-            onClick={handleClick}
-            className={`flex flex-col justify-center items-center ml-3 md:ml-[32px] z-20 h-4 cta-fade absolute top-[30px] right-4 md:top-10 md:right-10`}
-          >
-            <span
-              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm rotate-45 translate-y-1`}
-            ></span>
-            <span
-              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm my-0.5 opacity-0`}
-            ></span>
-            <span
-              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm -rotate-45 -translate-y-1`}
-            ></span>
-          </button> */}
           <div
             className={`text-white fixed w-full h-full top-0 left-0 z-10 ${
               isOpen ? "flex" : "hidden"
@@ -283,17 +291,86 @@ const Header = () => {
               className="flex flex-col w-full h-full bg-[#070F24] px-4 pt-[29px] md:px-10 md:pt-[42px] gap-[30px]
             md:gap-10 uppercase font-roboC text-base leading-[16.41px] tracking-[1px] md:text-[24px] md:leading-[28px]"
             >
-              <Link
-                href="/"
-                className={areTabsVisible ? "tab-fade-mobile" : ""}
-              >
-                <Image
-                  src="/images/icons/logo.png"
-                  width={120}
-                  height={120}
-                  alt="logo"
-                />
-              </Link>
+              <div className="flex justify-between items-center">
+                <Link
+                  href="/"
+                  className={areTabsVisible ? "tab-fade-mobile" : ""}
+                >
+                  <Image
+                    src="/images/icons/logo.png"
+                    width={120}
+                    height={120}
+                    alt="logo"
+                  />
+                </Link>
+                <button
+                  onClick={handleClick}
+                  className={`flex flex-col justify-center items-center ml-3 md:ml-[32px] h-4`}
+                >
+                  <span
+                    className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm rotate-45 translate-y-1`}
+                  ></span>
+                  <span
+                    className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm my-0.5 opacity-0`}
+                  ></span>
+                  <span
+                    className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm -rotate-45 -translate-y-1`}
+                  ></span>
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-6">
+                <Link href="/" className="text-[13px] hover:underline">
+                  Home
+                </Link>
+                <Link href="/" className="text-[13px] hover:underline">
+                  Easy Monthly Installments
+                </Link>
+                <Link href="/" className="text-[13px] hover:underline">
+                  Shop by Brands
+                </Link>
+                <Link href="/" className="text-[13px] hover:underline">
+                  Become a Vendor
+                </Link>
+              </div>
+              <div className="flex items-center gap-5 mt-10">
+                <Link href="">
+                  <Image
+                    src="/images/icons/facebook.svg"
+                    width={11}
+                    height={22}
+                    alt="facebook"
+                    className="cursor-pointer"
+                  />
+                </Link>
+                <Link href="">
+                  <Image
+                    src="/images/icons/twiter.svg"
+                    width={22}
+                    height={20}
+                    alt="twiter"
+                    className="cursor-pointer"
+                  />
+                </Link>
+                <Link href="">
+                  <Image
+                    src="/images/icons/linkedin.svg"
+                    width={22}
+                    height={22}
+                    alt="linkedin"
+                    className="cursor-pointer"
+                  />
+                </Link>
+                <Link href="">
+                  <Image
+                    src="/images/icons/instragram.svg"
+                    width={22}
+                    height={22}
+                    alt="instragram"
+                    className="cursor-pointer"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

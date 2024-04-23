@@ -10,7 +10,7 @@ const ProductCard = ({ item }) => {
         <div className="relative ">
           <p className="text-xs capitalize mb-1">{item?.category}</p>
           <h5 className="text-[15px] text-[#034E53] mb-4">
-            {item?.title.slice(0, 15)}...
+            {item?.title.slice(0, 10)}...
           </h5>
           <div className="mx-auto">
             <Image

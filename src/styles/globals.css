@@ -9,152 +9,27 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.product-slider .swiper-button-prev {
-  background-image: url("/images/icons/active-prev-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  width: 20px;
-  height: 11px;
-  left: 16px;
-  top: 24px;
-  right: inherit;
-}
-@media only screen and (min-width: 768px) {
-  .product-slider .swiper-button-prev {
-    left: 40px;
-  }
-}
-.product-slider .swiper-button-prev.swiper-button-disabled {
-  background-image: url("/images/icons/prev-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  width: 20px;
-  height: 11px;
-  right: inherit;
-  opacity: 1;
-}
-
-.product-slider .swiper-button-prev.swiper-button-disabled:after,
-.product-slider .swiper-button-next.swiper-button-disabled:after {
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
   display: none;
 }
 
-.product-slider .swiper-button-prev:after {
-  background-image: url("/images/icons/active-prev-arrow.svg");
-  display: none;
-}
-
-.product-slider .swiper-button-next {
-  background-image: url("/images/icons/active-next-arrow.svg");
+.swiper .swiper-button-prev {
+  background-image: url("/images/icons/prev.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  position: absolute;
-  width: 20px;
-  height: 11px;
-  left: 70px;
-  top: 24px;
-  right: inherit;
 }
-@media only screen and (min-width: 768px) {
-  .product-slider .swiper-button-next {
-    left: 101px;
-  }
+
+.swiper .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.1;
 }
-.product-slider .swiper-button-next.swiper-button-disabled {
-  background-image: url("/images/icons/next-arrow.svg");
+
+.swiper .swiper-button-next {
+  background-image: url("/images/icons/next.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  position: absolute;
-  width: 20px;
-  right: inherit;
-  opacity: 1;
 }
 
-.product-slider .swiper-button-next:after {
-  display: none;
-}
-.product-slider .swiper {
-  padding-top: 44px;
-}
-@media only screen and (min-width: 768px) {
-  .product-slider .swiper {
-    padding-top: 60px;
-  }
-}
-
-.product-slider .swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  left: 16px;
-  bottom: 0px;
-  position: absolute;
-  padding: 0;
-}
-@media only screen and (min-width: 768px) {
-  .product-slider .swiper-pagination {
-    display: none;
-  }
-}
-
-.product-slider .swiper-pagination .pagination {
-  display: inline-flex;
-  width: initial;
-  align-items: center;
-  margin: 0 29px;
-}
-.product-slider .swiper-pagination .swiper-pagination-bullet {
-  height: 10px;
-  width: 10px;
-  margin-right: 7px;
-  opacity: 1;
-  display: inline-block;
-  background: transparent;
-  border: 1px solid #ffd700;
-}
-.product-slider .swiper-pagination-bullet-active {
-  background: #ffd700 !important;
-}
-.product-slider
-  .swiper-pagination
-  .swiper-pagination-bullet
-  .swiper-pagination-bullet-active {
-  height: 10px;
-  width: 10px;
-  background: #ffd700 !important;
-}
-.product-slider .swiper-pagination .swiper-pagination-bullet-active:first-child {
-  margin-left: 0;
-}
-.product-slider .swiper-pagination .swiper-pagination-bullet-active:last-child {
-  margin-right: 0;
-}
-.product-slider .swiper .swiper-wrapper .swiper-slide .product-swiper-slide {
-  width: 136px !important;
-}
-@media only screen and (min-width: 768px) {
-  .product-slider .swiper .swiper-wrapper .swiper-slide .product-swiper-slide {
-    width: 213px !important;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .product-slider .swiper .swiper-wrapper .swiper-slide .product-swiper-slide {
-    width: 260px !important;
-  }
-}
-
-.product-slider .swiper-button-next:hover,
-.product-slider .swiper-button-prev:hover {
-  filter: hue-rotate(112deg) saturate(80%) brightness(100%) grayscale(20%);
-}
-
-.product-swiper-slide .attraction-card .learn-more-link {
-  margin-bottom: 16px;
-}
-@media only screen and (min-width: 768px) {
-  .product-swiper-slide .attraction-card .learn-more-link {
-    margin-bottom: 0;
-  }
+.swiper .swiper-button-next.swiper-button-disabled {
+  opacity: 0.35;
 }

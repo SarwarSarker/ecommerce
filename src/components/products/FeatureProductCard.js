@@ -26,7 +26,7 @@ const FeatureProductCard = ({ item, index }) => {
                     alt=""
                   />
                 </div>
-                <div className="absolute top-0 right-0 flex flex-col justify-center items-center  rounded-full text-md md:text-xl px-3 lg:px-7 py-3 h-20 lg:h-30 w-20 lg:w-30 bg-gradient-to-r from-[#FF512F] to-[#DD2476] text-black">
+                <div className="absolute top-0 right-0 flex flex-col justify-center items-center  rounded-full text-md md:text-xl lg:text-2xl px-3 lg:px-7 py-3 h-20 lg:h-32 w-20 lg:w-32 bg-gradient-to-r from-[#FF512F] to-[#DD2476] text-white">
                   <p className="">Save</p>
                   <p className="">10%</p>
                 </div>
@@ -42,10 +42,10 @@ const FeatureProductCard = ({ item, index }) => {
                   {item?.title.slice(0, 15)}...
                 </h2>
                 <div className="flex gap-3 items-center">
-                  <p className="text-md lg:text-xl mb-2 text-lightBlue">
+                  <p className="text-md lg:text-xl mb-2 text-red-500">
                     RS.{item?.price}
                   </p>
-                  <p className="text-sm lg:text-sm mb-2 line-through text-gray-300">
+                  <p className="text-sm lg:text-sm mb-2 line-through text-gray-600">
                     RS.{reducedPrice.toFixed(2)}
                   </p>
                 </div>
@@ -53,7 +53,7 @@ const FeatureProductCard = ({ item, index }) => {
               <div></div>
             </div>
 
-            <div className="mt-2 text-sm flex justify-between items-center text-red-400">
+            <div className="mt-2 text-sm flex justify-between items-center text-lightBlue">
               <p className="">
                 Already Sold: {Math.floor(Math.random() * 50) + 1}
               </p>
@@ -70,7 +70,7 @@ const FeatureProductCard = ({ item, index }) => {
                 <p className="text-md lg:text-xl mb-2 text-lightBlue">
                   RS.{item?.price}
                 </p>
-                <p className="text-sm lg:text-sm mb-2 line-through text-gray-300">
+                <p className="text-sm lg:text-sm mb-2 line-through text-gray-600">
                   RS.{reducedPrice.toFixed(2)}
                 </p>
               </div>

@@ -35,6 +35,10 @@ const ProductList = () => {
               spaceBetween: 30,
             },
             1024: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+            1280: {
               slidesPerView: 6,
               spaceBetween: 30,
             },

@@ -11,14 +11,15 @@ const CategoryList = () => {
 
   return (
     <div className="bg-gradient-to-b from-[#F3EDC9] to-white">
-      <div className="container mx-auto p-5  pb-10 border-b border-gray-400 lg:px-10">
+      <div className="container mx-auto px-5  pt-10  lg:px-10">
+        <div className="border-b border-gray-400 pb-10">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation={true}
           pagination={{ clickable: true }}
           slidesPerView={4.2}
           spaceBetween={30}
-          className="relative"
+          className="relative "
           breakpoints={{
             // Responsive breakpoints
             0: {
@@ -47,7 +48,7 @@ const CategoryList = () => {
             ))}
         </Swiper>
       </div>
-    </div>
+    </div></div>
   );
 };
 
