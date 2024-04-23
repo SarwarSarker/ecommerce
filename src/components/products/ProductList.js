@@ -8,10 +8,10 @@ import { useGetProductQuery } from "../../GlobalRedux/service/product/productApi
 
 const ProductList = () => {
   const { data } = useGetProductQuery();
-  
+
   return (
     <>
-      <div className="p-5 lg:py-10 lg:px-10">
+      <div className="container mx-auto p-5 lg:py-10 lg:px-10">
         <h3 className="text-[28px] mb-5">
           <span className="text-lightBlue">New</span> Arrivals
         </h3>

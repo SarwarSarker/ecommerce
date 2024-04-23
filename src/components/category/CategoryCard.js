@@ -4,7 +4,7 @@ import Image from "next/image";
 const CategoryCard = ({ item }) => {
   return (
     <>
-      <div className="relative">
+      <div className="relative container mx-auto">
         <div className="relative">
           <Image
             src="/images/category.png"

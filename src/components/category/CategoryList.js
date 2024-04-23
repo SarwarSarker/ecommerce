@@ -10,8 +10,8 @@ const CategoryList = () => {
   const { data } = useGetProductCategoriesQuery();
 
   return (
-    <div className="p-5 bg-gradient-to-b from-[#F3EDC9] to-white lg:px-10">
-      <div className="pb-10 border-b border-gray-400">
+    <div className="bg-gradient-to-b from-[#F3EDC9] to-white">
+      <div className="container mx-auto p-5  pb-10 border-b border-gray-400 lg:px-10">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation={true}
