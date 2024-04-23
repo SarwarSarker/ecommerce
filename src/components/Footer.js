@@ -8,27 +8,11 @@ const Footer = () => {
           <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12 ">
               <div className="w-full mb-10">
-                <a
-                  href="javascript:void(0)"
-                  className="mb-6 inline-block max-w-[160px]"
-                >
-                  <img
-                    src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg"
-                    alt="logo"
-                    className="max-w-full dark:hidden"
-                  />
-                  <img
-                    src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
-                    alt="logo"
-                    className="max-w-full hidden dark:block"
-                  />
-                </a>
                 <p className="text-base text-body-color dark:text-dark-6 mb-7">
                   Sed ut perspiciatis undmnis is iste natus error sit amet
                   voluptatem totam rem aperiam.
                 </p>
                 <p className="flex items-center text-sm font-medium text-dark dark:text-white">
-                  
                   <span>+012 (345) 678 99</span>
                 </p>
               </div>
@@ -160,7 +144,9 @@ const Footer = () => {
         </div>
       </footer>
       <div className="px-5 bg-[#161616] py-5">
-         <p className="text-white text-lg mx-auto max-w-5xl">© 2021 Winstore. All Rights Reserved.</p>
+        <p className="text-white text-lg mx-auto max-w-5xl">
+          © 2021 Winstore. All Rights Reserved.
+        </p>
       </div>
     </>
   );
