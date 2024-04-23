@@ -206,17 +206,18 @@ const Header = () => {
       </header>
 
       <header
-        className={`flex  flex-col min-h-[60px] py-4 px-4 md:px-10 md:py-6 lg:py-8  lg:hidden fixed top-0 bg-transparent w-full  z-20 `}
+        className={`flex  flex-col min-h-[60px] py-4 px-4 md:px-10 md:py-6 lg:py-8  lg:hidden  bg-lightGreen w-full`}
       >
         <div className="flex items-center justify-between mb-[18px] md:mb-6">
           <Link
-            href="https://www.sonypictures.com/"
-            className="logo-fade sony-text-header cursor-pointer inline-block text-white uppercase font-500 text-sm md:text-base leading-[18px]"
+            href="/"
+            className="logo-fade cursor-pointer inline-block text-white uppercase font-500 text-sm md:text-base leading-[18px]"
           >
-            <img
-              src="https://secure.sonypictures.com/movies/sweepstakes/ui/mp/gtsnapchat/images/sp_logo.svg"
-              alt=""
-              className="w-full  max-w-[158px]"
+            <Image
+              src="/images/icons/logo.png"
+              width={120}
+              height={120}
+              alt="logo"
             />
           </Link>
         </div>
