@@ -216,6 +216,22 @@ const Header = () => {
       <header
         className={`flex  flex-col min-h-[60px] py-4 px-4 md:px-10 md:py-6 lg:py-8  lg:hidden  bg-lightGreen w-full`}
       >
+        <div className="flex mb-2 items-center justify-between text-white">
+          <p className="text-[9px] cursor-pointer hover:underline">
+            Call Us Now
+          </p>
+          <div className="flex items-center text-[13px]">
+            <Image
+              src="/images/icons/headphone.svg"
+              width={15}
+              height={15}
+              alt="headphone"
+              className="mr-2"
+            />
+            <span className="cursor-pointer">+011 5827918</span>
+          </div>
+          <p className="text-[13px] hover:underline cursor-pointer">Sign In</p>
+        </div>
         <div className="flex items-center justify-between mb-[18px] md:mb-6">
           <Link
             href="/"
@@ -228,48 +244,37 @@ const Header = () => {
               alt="logo"
             />
           </Link>
-        </div>
-        <div className="w-full flex items-center justify-between  text-white z-20 ">
-          <a
-            href={process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}
-            className=" logo-fade w-full max-w-[60.27%] md:max-w-[52.25%]"
-          >
-            {/* <img
-              src="/images/mlogo.svg"
-              alt=""
-              className="max-w-[88.73%] min-h-[8px] w-full md:min-h-[15px] md:max-w-[67.3%] header-logo-mob"
-            /> */}
-          </a>
           <button
             onClick={handleClick}
-            // className="flex flex-col justify-center items-center ml-3 md:ml-[32px] z-20 h-4 cta-fade"
-            className={`flex flex-col justify-center items-center ml-3 md:ml-[32px] z-20 h-4 cta-fade ${
-              isOpen
-                ? "absolute top-[30px] right-4 md:top-10 md:right-10"
-                : "relative"
-            }`}
+            className={`flex flex-col justify-center items-center ml-3 md:ml-[32px] h-4 cta-fade relative`}
           >
             <span
-              className={`bg-white block transition-all duration-300 ease-out 
-                    h-0.5 w-5 rounded-sm ${
-                      isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-                    }`}
+              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm -translate-y-0.5`}
             ></span>
             <span
-              className={`bg-white block transition-all duration-300 ease-out 
-                    h-0.5 w-5 rounded-sm my-0.5 ${
-                      isOpen ? "opacity-0" : "opacity-100"
-                    }`}
+              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm my-0.5 opacity-100`}
             ></span>
             <span
-              className={`bg-white block transition-all duration-300 ease-out 
-                    h-0.5 w-5 rounded-sm ${
-                      isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-                    }`}
+              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm translate-y-0.5`}
             ></span>
           </button>
-          <div
+        </div>
+        <div className="w-full flex items-center justify-between  text-white z-20 ">
+          {/* <button
             onClick={handleClick}
+            className={`flex flex-col justify-center items-center ml-3 md:ml-[32px] z-20 h-4 cta-fade absolute top-[30px] right-4 md:top-10 md:right-10`}
+          >
+            <span
+              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm rotate-45 translate-y-1`}
+            ></span>
+            <span
+              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm my-0.5 opacity-0`}
+            ></span>
+            <span
+              className={`bg-white block transition-all duration-300 ease-out h-0.5 w-5 rounded-sm -rotate-45 -translate-y-1`}
+            ></span>
+          </button> */}
+          <div
             className={`text-white fixed w-full h-full top-0 left-0 z-10 ${
               isOpen ? "flex" : "hidden"
             }`}
@@ -278,19 +283,16 @@ const Header = () => {
               className="flex flex-col w-full h-full bg-[#070F24] px-4 pt-[29px] md:px-10 md:pt-[42px] gap-[30px]
             md:gap-10 uppercase font-roboC text-base leading-[16.41px] tracking-[1px] md:text-[24px] md:leading-[28px]"
             >
-              {/* <a href="/" className=" mb-5  md:pb-[30px] logo-fade">
-                <img
-                  src="/images/mlogo.svg"
-                  alt=""
-                  className="max-w-[53.2%] min-h-[8px] w-full md:min-h-[15px] md:max-w-[35%]"
-                />
-              </a> */}
-
               <Link
                 href="/"
                 className={areTabsVisible ? "tab-fade-mobile" : ""}
               >
-                itemname
+                <Image
+                  src="/images/icons/logo.png"
+                  width={120}
+                  height={120}
+                  alt="logo"
+                />
               </Link>
             </div>
           </div>
