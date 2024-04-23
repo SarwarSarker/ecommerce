@@ -226,11 +226,11 @@ const Header = () => {
             href={process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}
             className=" logo-fade w-full max-w-[60.27%] md:max-w-[52.25%]"
           >
-            <img
+            {/* <img
               src="/images/mlogo.svg"
               alt=""
               className="max-w-[88.73%] min-h-[8px] w-full md:min-h-[15px] md:max-w-[67.3%] header-logo-mob"
-            />
+            /> */}
           </a>
           <button
             onClick={handleClick}
@@ -270,13 +270,13 @@ const Header = () => {
               className="flex flex-col w-full h-full bg-[#070F24] px-4 pt-[29px] md:px-10 md:pt-[42px] gap-[30px]
             md:gap-10 uppercase font-roboC text-base leading-[16.41px] tracking-[1px] md:text-[24px] md:leading-[28px]"
             >
-              <a href="/" className=" mb-5  md:pb-[30px] logo-fade">
+              {/* <a href="/" className=" mb-5  md:pb-[30px] logo-fade">
                 <img
                   src="/images/mlogo.svg"
                   alt=""
                   className="max-w-[53.2%] min-h-[8px] w-full md:min-h-[15px] md:max-w-[35%]"
                 />
-              </a>
+              </a> */}
 
               <Link
                 href="/"
