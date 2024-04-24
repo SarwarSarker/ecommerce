@@ -25,7 +25,7 @@ const FeatureProducts = () => {
 
   return (
     <>
-      <div className="container mx-auto p-5 lg:py-10 lg:px-10">
+      <div className="container mx-auto p-5 lg:py-16 lg:px-10">
         <div className="flex flex-col lg:flex-row justify-between items-center mb-10">
           <h4 className="text-lg md:text-2xl">
             <span className="text-lightBlue">Best</span> Deals
