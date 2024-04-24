@@ -1,16 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { motion, useScroll, inView } from "framer-motion";
 import Image from "next/image";
+import { useGetProductCategoriesQuery } from "../GlobalRedux/service/product/productApi";
 
 const Header = () => {
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isCatOpen, setIsCatOpen] = useState(false);
   const [areTabsVisible, setTabsVisible] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleCategoryClick = () => {
+    setIsCatOpen(!isCatOpen);
   };
 
   useEffect(() => {
@@ -21,6 +24,8 @@ const Header = () => {
       setTabsVisible(false);
     }
   }, [isOpen]);
+
+  const { data } = useGetProductCategoriesQuery();
 
   return (
     <>
@@ -143,13 +148,57 @@ const Header = () => {
           <div className="container mx-auto">
             <div className="w-full flex items-center gap-5 md:py-3 lg:py-3 lg:px-10">
               <div className="flex basis-1/6 items-center gap-2">
-                <Image
-                  src="/images/icons/hambarger.svg"
-                  width={20}
-                  height={20}
-                  alt="logo"
-                />
-                <p className="inline-block text-[17px]">Browse By Category</p>
+                <div className="relative">
+                  <a
+                    className="flex items-center gap-2 "
+                    onClick={handleCategoryClick}
+                  >
+                    <button
+                      className={`flex flex-col justify-center items-center h-4`}
+                    >
+                      <span
+                        className={`bg-white block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm ${
+                      isCatOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+                    }`}
+                      ></span>
+                      <span
+                        className={`bg-white block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm my-0.5 ${
+                      isCatOpen ? "opacity-0" : "opacity-100"
+                    }`}
+                      ></span>
+                      <span
+                        className={`bg-white block transition-all duration-300 ease-out 
+                    h-0.5 w-5 rounded-sm ${
+                      isCatOpen
+                        ? "-rotate-45 -translate-y-1"
+                        : "translate-y-0.5"
+                    }`}
+                      ></span>
+                    </button>
+                    <span className="text-sm xl:text-[17px] cursor-pointer">
+                      Browse By Category
+                    </span>
+                  </a>
+                  <div
+                    className={`z-10 absolute  right-0 mt-4 ${
+                      isCatOpen ? "block" : "hidden"
+                    }`}
+                  >
+                    <div className="min-h-56 w-52 bg-white shadow-md px-6 pt-4 divide-y divide-gray-300">
+                      {data?.map((category) => (
+                        <Link
+                          key={category}
+                          href="#"
+                          className="py-3 block capitalize font-bold font-roboC text-[16px] leading-5 text-black "
+                        >
+                          {category}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="w-full flex basis-5/6 items-center justify-between gap-5">
                 <div className="flex gap-6">
@@ -167,7 +216,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className="flex items-center gap-5">
-                  <Link href="">
+                  <Link href="https://www.facebook.com/">
                     <Image
                       src="/images/icons/facebook.svg"
                       width={11}
@@ -176,7 +225,7 @@ const Header = () => {
                       className="cursor-pointer"
                     />
                   </Link>
-                  <Link href="">
+                  <Link href="https://twitter.com/">
                     <Image
                       src="/images/icons/twiter.svg"
                       width={22}
@@ -185,7 +234,7 @@ const Header = () => {
                       className="cursor-pointer"
                     />
                   </Link>
-                  <Link href="">
+                  <Link href="https://www.linkedin.com/">
                     <Image
                       src="/images/icons/linkedin.svg"
                       width={22}
@@ -194,7 +243,7 @@ const Header = () => {
                       className="cursor-pointer"
                     />
                   </Link>
-                  <Link href="">
+                  <Link href="https://www.instagram.com">
                     <Image
                       src="/images/icons/instragram.svg"
                       width={22}
@@ -334,7 +383,7 @@ const Header = () => {
                 </Link>
               </div>
               <div className="flex items-center gap-5 mt-10">
-                <Link href="">
+                <Link href="https://www.facebook.com/">
                   <Image
                     src="/images/icons/facebook.svg"
                     width={11}
@@ -343,7 +392,7 @@ const Header = () => {
                     className="cursor-pointer"
                   />
                 </Link>
-                <Link href="">
+                <Link href="https://twitter.com/">
                   <Image
                     src="/images/icons/twiter.svg"
                     width={22}
@@ -352,7 +401,7 @@ const Header = () => {
                     className="cursor-pointer"
                   />
                 </Link>
-                <Link href="">
+                <Link href="https://www.linkedin.com/">
                   <Image
                     src="/images/icons/linkedin.svg"
                     width={22}
@@ -361,7 +410,7 @@ const Header = () => {
                     className="cursor-pointer"
                   />
                 </Link>
-                <Link href="">
+                <Link href="https://www.instagram.com">
                   <Image
                     src="/images/icons/instragram.svg"
                     width={22}

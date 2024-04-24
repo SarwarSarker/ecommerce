@@ -30,7 +30,7 @@ const FeatureProducts = () => {
           <h4 className="text-lg md:text-2xl">
             <span className="text-lightBlue">Best</span> Deals
           </h4>
-          <div className="flex  gap-2 md:gap-3 lg:gap-7 items-center">
+          <div className="flex flex-wrap gap-2 md:gap-3 lg:gap-7 items-center">
             {data &&
               data.map((item) => (
                 <a
@@ -45,7 +45,7 @@ const FeatureProducts = () => {
                   {item}
                 </a>
               ))}
-            <div className="flex gap-4">
+            <div className="hidden md:flex gap-4">
               <Image
                 src="/images/icons/prevbold.svg"
                 width={10}

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const FeatureProductCard = ({ item, index }) => {
   const reducedPrice = item?.price * 0.9;
@@ -15,7 +16,7 @@ const FeatureProductCard = ({ item, index }) => {
           <>
             <div className="flex gap-5 justify-between">
               <div className="relative">
-                <div>
+                <div className="flex justify-center">
                   <Image
                     className=""
                     src={item?.image}
@@ -39,7 +40,9 @@ const FeatureProductCard = ({ item, index }) => {
             <div className="flex gap-5 justify-between">
               <div className="">
                 <h2 className="text-md lg:text-xl mb-2">
-                  {item?.title.slice(0, 15)}...
+                  <Link href={`/product/${item?.id}`}>
+                    {item?.title.slice(0, 15)}...
+                  </Link>
                 </h2>
                 <div className="flex gap-3 items-center">
                   <p className="text-md lg:text-xl mb-2 text-red-500">
@@ -65,7 +68,9 @@ const FeatureProductCard = ({ item, index }) => {
             <div className="flex gap-5 justify-between">
               <div className="">
                 <h2 className="text-md lg:text-xl mb-2">
-                  {item?.title.slice(0, 15)}...
+                  <Link href={`/product/${item?.id}`}>
+                    {item?.title.slice(0, 15)}...
+                  </Link>
                 </h2>
                 <p className="text-md lg:text-xl mb-2 text-lightBlue">
                   RS.{item?.price}

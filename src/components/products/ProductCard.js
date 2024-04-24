@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductCard = ({ item }) => {
   const reducedPrice = item.price * 0.9;
@@ -10,9 +11,11 @@ const ProductCard = ({ item }) => {
         <div className="relative ">
           <p className="text-xs capitalize mb-1">{item?.category}</p>
           <h5 className="text-[15px] text-[#034E53] mb-4">
-            {item?.title.slice(0, 10)}...
+            <Link href={`/product/${item?.id}`}>
+              {item?.title.slice(0, 10)}...
+            </Link>
           </h5>
-          <div className="mx-auto">
+          <div className="flex justify-center">
             <Image
               className=""
               src={item?.image}

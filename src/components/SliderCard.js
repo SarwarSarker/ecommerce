@@ -37,7 +37,7 @@ const SliderCard = () => {
                 </div>
               </div>
               <div className="mr-3 lg:mr-10 -mt-12 lg:-mt-40">
-                <p className="h-24 w-24 md:h-28 md:w-28 lg:h-28 lg:w-28 flex justify-center items-center p-6 text-xl md:text-3xl leading-7 lg:text-[47px] lg:leading-[50px] font-normal text-white rounded-full bg-gradient-to-r from-[#FDC830] to-[#F37335]">
+                <p className="h-24 w-24 md:h-28 md:w-28 lg:h-28 lg:w-28 flex justify-center items-center p-6 text-3xl leading-7 lg:text-[47px] lg:leading-[50px] font-normal text-white rounded-full bg-gradient-to-r from-[#FDC830] to-[#F37335]">
                   40%
                 </p>
               </div>
